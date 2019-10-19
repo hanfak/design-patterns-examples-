@@ -1,6 +1,7 @@
 package iterator.exampleone;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class Runner {
@@ -10,6 +11,7 @@ public class Runner {
     printAllNumbersOldFor(numbers);
     printAllNumbersNewFor(numbers);
     printAllNumbersNewStreamsFor(numbers);
+    printAllNumbersOldIterator(numbers);
   }
 
   private static void printAllNumbersNewStreamsFor(List<Integer> numbers) {
@@ -25,6 +27,13 @@ public class Runner {
   private static void printAllNumbersOldFor(List<Integer> numbers) {
     for (int i = 0; i < numbers.size(); i++) {
       System.out.println(numbers.get(i));
+    }
+  }
+
+  private static void printAllNumbersOldIterator(List<Integer> numbers) {
+    Iterator<Integer> iterator = numbers.iterator();
+    while (iterator.hasNext()) {
+      System.out.println(iterator.next());
     }
   }
 }
