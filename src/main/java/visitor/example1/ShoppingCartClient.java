@@ -25,4 +25,6 @@ public class ShoppingCartClient {
     System.out.println("sumOfFrieghtCostForSouthRegion = " + sumOfFrieghtCostForSouthRegion);
     return sumOfItemPrices + sumOfFrieghtCostForSouthRegion;
   }
+
+
 }
