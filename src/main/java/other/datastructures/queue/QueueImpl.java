@@ -1,4 +1,4 @@
-package other.queue;
+package other.datastructures.queue;
 
 import java.util.Arrays;
 
