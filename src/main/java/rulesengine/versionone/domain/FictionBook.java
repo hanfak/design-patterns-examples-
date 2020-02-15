@@ -1,4 +1,4 @@
-package rulesengine.versionone;
+package rulesengine.versionone.domain;
 
 public class FictionBook extends Book {
   public FictionBook(String title, String review) {

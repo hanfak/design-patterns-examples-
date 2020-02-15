@@ -1,5 +1,8 @@
 package rulesengine.versionone;
 
+import rulesengine.versionone.domain.Book;
+import rulesengine.versionone.domain.ClassifiedBook;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

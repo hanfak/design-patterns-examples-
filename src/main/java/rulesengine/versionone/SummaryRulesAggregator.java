@@ -1,5 +1,8 @@
 package rulesengine.versionone;
 
+import rulesengine.versionone.domain.Book;
+import rulesengine.versionone.rules.*;
+
 import java.util.ArrayList;
 import java.util.List;
 

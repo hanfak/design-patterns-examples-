@@ -1,4 +1,4 @@
-package rulesengine.versionone;
+package rulesengine.versionone.rules;
 
 import java.util.List;
 

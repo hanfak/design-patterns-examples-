@@ -1,4 +1,8 @@
-package rulesengine.versionone;
+package rulesengine.versionone.rules;
+
+import rulesengine.versionone.Rule;
+import rulesengine.versionone.domain.Book;
+import rulesengine.versionone.domain.ClassifiedBook;
 
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;

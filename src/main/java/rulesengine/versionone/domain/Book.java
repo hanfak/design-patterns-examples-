@@ -1,4 +1,4 @@
-package rulesengine.versionone;
+package rulesengine.versionone.domain;
 
 public class Book {
   private final String title;

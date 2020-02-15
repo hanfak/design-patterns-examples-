@@ -1,4 +1,7 @@
-package rulesengine.versionone;
+package rulesengine.versionone.rules;
+
+import rulesengine.versionone.Rule;
+import rulesengine.versionone.domain.Book;
 
 import java.util.List;
 import java.util.stream.Stream;

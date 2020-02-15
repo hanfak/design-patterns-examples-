@@ -1,5 +1,11 @@
 package rulesengine.versionone;
 
+import rulesengine.versionone.domain.Book;
+import rulesengine.versionone.rules.LongReviewRuleWithNoPunctuationRule;
+import rulesengine.versionone.rules.LongReviewWithCommaRule;
+import rulesengine.versionone.rules.ShortReviewRule;
+import rulesengine.versionone.rules.Summarizer;
+
 public class Runner {
 
   public static void main(String... args) {
