@@ -47,7 +47,7 @@ public class App {
 
     anArrayList.remove(0);
     System.out.println(anArrayList);
-    anArrayList.remove(new Integer(5));
+    anArrayList.remove(Integer.valueOf(5));
     System.out.println(anArrayList);
     anArrayList.set(1, 10);
     System.out.println(anArrayList);
