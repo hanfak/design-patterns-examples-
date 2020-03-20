@@ -1,4 +1,4 @@
-package testing.argumentcaptor;
+package testing.mockito.argumentcaptor;
 
 import com.google.common.base.Objects;
 

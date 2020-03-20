@@ -1,4 +1,4 @@
-package testing.argumentcaptor;
+package testing.mockito.argumentcaptor;
 
 public class PersonRepository {
   public void save(Person person) {
