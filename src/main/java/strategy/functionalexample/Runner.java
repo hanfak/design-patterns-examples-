@@ -29,7 +29,7 @@ public class Runner {
     System.out.println(totalAllValuesAlternatefunctionalImproved(numbers, e -> e % 2 == 0));
     System.out.println(totalAllValuesAlternatefunctionalImproved(numbers, e -> e % 2 != 0));
 
-    // Passing in delegate method as high order executearoundmethod.function
+    // Passing in delegate method as high order concurrency.executearoundmethod.function
     System.out.println(totalAllValuesfunctionalImproved(numbers, Util::alwaysTrue));
     System.out.println(totalAllValuesfunctionalImproved(numbers, Util::isEven));
     System.out.println(totalAllValuesfunctionalImproved(numbers, e -> Util.isOdd(e)));

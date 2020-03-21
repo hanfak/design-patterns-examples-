@@ -1,4 +1,4 @@
-package executearoundmethod.consumer;
+package concurrency.executearoundmethod.consumer;
 
 import java.util.function.Consumer;
 
