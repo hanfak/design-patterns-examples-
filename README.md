@@ -2,16 +2,16 @@ A sandbox to play and implement design patterns
 
 Topics include
 
-- Java libraries (data structures, reflection etc)
+- Java javalibraries (data structures, reflection etc)
 - Functional Programming java 8+
 - refactoring
-- Architecture patterns (clean, mappings betweeen layers)
+- Architecture patterns (clean, architecturepatterns.mappings betweeen layers)
 - Design patterns (Gang of 4, others, effective java)
-- Enterprise patterns (rules engines, workflows)
-- Testing patterns (mocking, stubbing) and libraries (mockito, assertj)
+- Enterprise patterns (rules engines, enterprisepatterns.workflows)
+- Testing patterns (mocking, stubbing) and javalibraries (mockito, assertj)
 - concurrency
 - regex
-- Common actions (email)
+- Common actions (common.email)
 - Comp sci (data structures, algorithms)
 
 ## Useful links
