@@ -15,6 +15,14 @@ public class PhoneNumber implements Formattable {
     return new PhoneNumber(areaCode, number);
   }
 
+  public int getAreaCode() {
+    return areaCode;
+  }
+
+  public int getNumber() {
+    return number;
+  }
+
   // should be added if this object will be returned to user
   @Override
   public void formatTo(java.util.Formatter formatter, int flags, int width, int precision) {

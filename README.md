@@ -11,7 +11,7 @@ Topics include
 - Testing patterns (mocking, stubbing) and javalibraries (mockito, assertj)
 - concurrency
 - regex
-- Common actions (common.email)
+- Common actions (javalibraries.email)
 - Comp sci (data structures, algorithms)
 
 ## Useful links

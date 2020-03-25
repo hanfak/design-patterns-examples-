@@ -1,0 +1,9 @@
+- Do different exception
+    - checked
+    - unchecked
+- try catch
+- throw
+- throws
+- testing
+    - junit, rules
+    - assertj

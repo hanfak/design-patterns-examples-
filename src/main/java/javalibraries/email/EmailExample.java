@@ -1,4 +1,4 @@
-package common.email;
+package javalibraries.email;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -31,7 +31,7 @@ public class EmailExample {
       message.setRecipients(TO, InternetAddress.parse(username));
       message.setSubject("Testing Gmail TLS");
       message.setText("Dear Mail Crawler,"
-              + "\n\n Please do not spam my common.email!");
+              + "\n\n Please do not spam my javalibraries.email!");
 
       Transport.send(message);
 
