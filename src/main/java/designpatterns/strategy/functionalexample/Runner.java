@@ -1,8 +1,12 @@
 package designpatterns.strategy.functionalexample;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Predicate;
+
+import static java.math.BigDecimal.valueOf;
 
 public class Runner {
   public static void main(String[] args) {
@@ -12,7 +16,7 @@ public class Runner {
     System.out.println(totalAllEvenValuesFunctionally(numbers));
     System.out.println(totalAllOddValuesFunctionally(numbers));
 
-    System.out.println(totalAllValuesProcedural(numbers));
+    System.out.println(totalAllValuesProcedural(numbers, 0));
     System.out.println(totalAllEvenValuesProcedural(numbers));
     System.out.println(totalAllOddValuesProcedural(numbers));
 
@@ -33,6 +37,34 @@ public class Runner {
     System.out.println(totalAllValuesfunctionalImproved(numbers, Util::alwaysTrue));
     System.out.println(totalAllValuesfunctionalImproved(numbers, Util::isEven));
     System.out.println(totalAllValuesfunctionalImproved(numbers, e -> Util.isOdd(e)));
+
+    Integer productResult = aggregateOfAllValues(numbers, 1, (a, b) -> a = a * b);
+    System.out.println("productResult = " + productResult);
+    Integer sumResult = aggregateOfAllValues(numbers, 0, (a, b) -> a = a + b);
+    System.out.println("sumResult = " + sumResult);
+
+    List<BigDecimal> numbers1 = Arrays.asList(BigDecimal.ONE,
+            valueOf(2),
+            valueOf(3),
+            valueOf(4),
+            valueOf(5),
+            valueOf(6),
+            valueOf(7),
+            valueOf(8),
+            valueOf(9),
+            valueOf(10));
+    BigDecimal sumResult1 = aggregateOfAllValues(numbers1, BigDecimal.ZERO, (a, b) -> a.add(b));
+    System.out.println("sumResultofBigDec = " + sumResult1);
+    BigDecimal productResult1 = aggregateOfAllValues(numbers1, BigDecimal.ONE, (a, b) -> a.multiply(b));
+    System.out.println("productResultofBigDec = " + productResult1);
+  }
+
+  private static <T, S> S aggregateOfAllValues(List<T> values, S initial, BiFunction<T, S, S> aggregator) {
+    S state = initial;
+    for (T t : values) {
+      state = aggregator.apply(t, state);
+    }
+    return state;
   }
 
   private static int totalAllValuesfunctionalImproved(List<Integer> numbers, Predicate<Integer> selector) {
@@ -55,19 +87,19 @@ public class Runner {
     return numbers.stream().filter(number -> number % 2 != 0).mapToInt(number -> number).sum();
   }
 
-private static int totalAllValuesProceduralImproved(List<Integer> numbers, Predicate<Integer> selector) {
-  int result = 0;
-
-  for (int number : numbers) {
-    if(selector.test(number)) {
-      result += number;
-    }
-  }
-  return result;
-}
-
-  private static Integer totalAllValuesProcedural(List<Integer> numbers) {
+  private static int totalAllValuesProceduralImproved(List<Integer> numbers, Predicate<Integer> selector) {
     int result = 0;
+
+    for (int number : numbers) {
+      if (selector.test(number)) {
+        result += number;
+      }
+    }
+    return result;
+  }
+
+  private static Integer totalAllValuesProcedural(List<Integer> numbers, int initial) {
+    int result = initial;
 
     for (int number : numbers) {
       result += number;
