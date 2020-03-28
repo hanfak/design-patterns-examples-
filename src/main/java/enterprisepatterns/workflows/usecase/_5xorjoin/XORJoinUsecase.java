@@ -1,4 +1,4 @@
-package enterprisepatterns.workflows.usecase._xorjoin;
+package enterprisepatterns.workflows.usecase._5xorjoin;
 
 import enterprisepatterns.workflows.Infrastructure.ComplexCalculatorImplementationOne;
 import enterprisepatterns.workflows.Infrastructure.SomeRaceConditionProcessor;
@@ -20,12 +20,13 @@ public class XORJoinUsecase {
 
   public void execute(Integer input) {
     // Example 1 - using callables
-    // Step 1 - Start all processors
+    // Step 1 - Start all processors, the fastest one is used (race condition)
     UseCaseResultModel process = parallelProcessor.process(Arrays.asList(
             () -> calculator.complexRandomTimeLengthCalculate1(input),
             () -> calculator.complexRandomTimeLengthCalculate2(input),
             () -> calculator.complexRandomTimeLengthCalculate3(input)
             ));
+    // Step 2 - use the result
     System.out.println(process.result);
 
   }
