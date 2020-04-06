@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static java.util.Collections.singletonList;
-
 public class ORSplitUsecse {
 
   private final ParallelProcessor<String> parallelProcessor;
@@ -42,14 +40,14 @@ public class ORSplitUsecse {
                 () -> service.sendSomethingElse(input))));
         break;
     }
-    // Same as above but for java 12+
-    List<String> result1 = switch(input) {
-      case "a" -> singletonList(service.sendSomething(input));
-      case "b" -> singletonList(service.sendSomethingElse(input));
-      default -> parallelProcessor.process(Arrays.asList(
-              () -> service.sendSomething(input),
-              () -> service.sendSomethingElse(input)));
-    };
+    // Same as above but for java 12+ enable preview mode
+//    List<String> result1 = switch(input) {
+//      case "a" -> singletonList(service.sendSomething(input));
+//      case "b" -> singletonList(service.sendSomethingElse(input));
+//      default -> parallelProcessor.process(Arrays.asList(
+//              () -> service.sendSomething(input),
+//              () -> service.sendSomethingElse(input)));
+//    };
 
   }
 }

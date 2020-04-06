@@ -17,18 +17,17 @@ public class PhoneNumber1 {
 
   // To create equals, we compare on the state of the objects, each field is compared between the two objects
   @Override
-  public boolean equals(Object obj) {
-    if (obj == this) return true; // This shortcircuits the check that the same object is being checked, especially good if many fields
+  public boolean equals(Object o) {
+    if (this == o) return true; // This shortcircuits the check that the same object is being checked, especially good if many fields
+    if (o == null || getClass() != o.getClass()) return false;
 
-    // Can just do this
-    if (obj instanceof PhoneNumber) {
-      PhoneNumber1 other = (PhoneNumber1) obj;
-      return Objects.equals(this.areaCode, other.areaCode) // useful for objects, helps with null
-              && this.number == other.number; // use == for primitives, better performance, due boxing ofthe primitives
-    }
-    return false;
+    PhoneNumber1 that = (PhoneNumber1) o;
+
+    return Objects.equals(this.areaCode, that.areaCode) // useful for objects, helps with null
+              && this.number == that.number; // use == for primitives, better performance, due boxing ofthe primitives
   }
- // Must always implement hashcode and equals together
+
+  // Must always implement hashcode and equals together
   @Override
   public int hashCode() {
     return super.hashCode();
