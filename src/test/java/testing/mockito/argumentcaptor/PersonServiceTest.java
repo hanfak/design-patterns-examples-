@@ -55,4 +55,14 @@ public class PersonServiceTest {
       Assertions.assertThat(captured.getName()).isEqualTo("deleted");
     }
   }
+
+  @Test
+  public void shouldCaptureManually() {
+    ArgumentCaptor<Person> argumentCaptor = ArgumentCaptor.forClass(Person.class);
+    Person person = new Person("test");
+    personService.delete(person);
+    Mockito.verify(personRepository).delete(argumentCaptor.capture());
+    Person captured = argumentCaptor.getValue();
+    Assertions.assertThat(captured.getName()).isEqualTo("deleted");
+  }
 }
