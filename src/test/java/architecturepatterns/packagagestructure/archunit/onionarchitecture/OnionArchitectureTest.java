@@ -17,7 +17,7 @@ public class OnionArchitectureTest {
           .domainModels("..domain.model..")
           .domainServices("..domain.service..")
           .applicationServices("..application..")
-          .adapter("cli", "..adapter.cli..")
+          .applicationServices("..application.cli..")
           .adapter("persistence", "..adapter.persistence..")
           .adapter("rest", "..adapter.rest..");
 }

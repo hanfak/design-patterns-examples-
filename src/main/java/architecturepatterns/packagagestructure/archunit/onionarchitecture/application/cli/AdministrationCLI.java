@@ -1,4 +1,4 @@
-package architecturepatterns.packagagestructure.archunit.onionarchitecture.adapter.cli;
+package architecturepatterns.packagagestructure.archunit.onionarchitecture.application.cli;
 
 
 import architecturepatterns.packagagestructure.archunit.onionarchitecture.application.AdministrationPort;
