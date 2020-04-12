@@ -1,4 +1,4 @@
-package javalibraries.tostring.effectivejava;
+package javalibraries.string.effectivejava;
 
 import com.google.common.base.MoreObjects;
 

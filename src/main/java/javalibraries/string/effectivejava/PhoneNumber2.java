@@ -1,4 +1,4 @@
-package javalibraries.tostring.effectivejava;
+package javalibraries.string.effectivejava;
 
 
 import org.apache.commons.lang3.builder.ToStringBuilder;

@@ -1,4 +1,4 @@
-package javalibraries.tostring.effectivejava;
+package javalibraries.string.effectivejava;
 
 public class PhoneNumber {
   private final int areaCode;

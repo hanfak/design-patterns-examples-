@@ -1,4 +1,4 @@
-package javalibraries.tostring.effectivejava.formatter;
+package javalibraries.string.effectivejava.formatter;
 
 import java.util.Formattable;
 
