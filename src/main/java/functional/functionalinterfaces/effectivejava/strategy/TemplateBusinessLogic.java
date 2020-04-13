@@ -1,6 +1,6 @@
 package functional.functionalinterfaces.effectivejava.strategy;
 
-// How designpatterns.template pattern is implemented, outdated, better to use composition and designpatterns.strategy pattern
+// How designpatterns.gangoffour.template pattern is implemented, outdated, better to use composition and designpatterns.gangoffour.strategy pattern
 public abstract class TemplateBusinessLogic {
   public void compute() {
     System.out.println("x");

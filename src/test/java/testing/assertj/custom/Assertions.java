@@ -5,5 +5,5 @@ public class Assertions {
     return new PersonAssert(actual);
   }
 
-  // static designpatterns.factory methods of other assertion classes
+  // static designpatterns.gangoffour.factory methods of other assertion classes
 }

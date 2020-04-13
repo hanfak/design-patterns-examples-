@@ -2,7 +2,7 @@ package javalibraries.enums;
 
 import java.util.function.IntBinaryOperator;
 
-// Using designpatterns.strategy pattern with lambdas in enums
+// Using designpatterns.gangoffour.strategy pattern with lambdas in enums
 // Good for small operations
 public enum Operation3 {
   ADD(Integer::sum),

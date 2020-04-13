@@ -17,7 +17,7 @@ public class RuleRunner<T, S> {
     this.rules = rules;
   }
 
-  // To use a designpatterns.builder
+  // To use a designpatterns.gangoffour.builder
   public RuleRunner() {
     this.rules = new ArrayList<>();
   }

@@ -6,7 +6,7 @@ import java.util.function.IntBinaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// Using designpatterns.strategy pattern with lambdas in enums
+// Using designpatterns.gangoffour.strategy pattern with lambdas in enums
 // Good for small operations
 public enum Operation4 {
   ADD(Integer::sum, "a"),

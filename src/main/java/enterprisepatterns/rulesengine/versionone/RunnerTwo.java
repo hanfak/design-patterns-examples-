@@ -21,7 +21,7 @@ public class RunnerTwo {
     // This allows us to use multiple groups of rules for specific versions.
     // One situation will use version_1 rule set, ie long summary only when 9 or more words, add ellipse to end and/replace comma
     // Another situation will use version_2 rule set, ie all summary must have certain names obfuscated for important documents
-    // This helps collate all rules for specific actions, ie get summary, into one place. Acts a sort of designpatterns.factory
+    // This helps collate all rules for specific actions, ie get summary, into one place. Acts a sort of designpatterns.gangoffour.factory
     List<Book> books = Arrays.asList(harryPotterBook, harryPotter2Book, harryPotter3Book, harryPotter4Book);
     books.stream()
             .map(book -> new RuleRunner<>(SummaryRulesAggregator.VERSION_1.getRules())

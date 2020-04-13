@@ -33,7 +33,7 @@ public class ExampleOne {
     // stream<T> -> stream<R>
     System.out.println("\nExample 3");
     List<Integer> result2 = numbers.stream()
-            // flatmap needs an designpatterns.iterator ie stream, as it could be passed anything
+            // flatmap needs an designpatterns.gangoffour.iterator ie stream, as it could be passed anything
             // ie set, list, so compiler will complain
             .flatMap(e -> List.of(e - 1, e + 2).stream())
             .collect(toList());

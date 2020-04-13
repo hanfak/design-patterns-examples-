@@ -5,7 +5,7 @@ import architecturepatterns.mappings.version1.entryprovider.Controller;
 import architecturepatterns.mappings.version1.usecase.port.UseCaseImpl;
 
 /**
- * Example of a full mapping designpatterns.strategy.
+ * Example of a full mapping designpatterns.gangoffour.strategy.
  *
  * When communicating between layers, the model used is specific to it's interface
  *
