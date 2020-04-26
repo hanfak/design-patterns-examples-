@@ -35,7 +35,7 @@ public class RuleRunner<T, S> {
     return rules.stream()
             .filter(rule -> rule.matches(entity))
             .map(rule -> rule.process(entity))
-            .findFirst()
+            .findFirst() //find all by removing this line
             .orElseThrow(() -> new RuntimeException("No Matching rule found"));
   }
 
