@@ -3,7 +3,7 @@ package testing.equalsverifier;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import nl.jqno.equalsverifier.EqualsVerifierReport;
 import org.junit.Test;
-
+// https://jqno.nl/equalsverifier/
 public class Example1Test {
 
   @Test
