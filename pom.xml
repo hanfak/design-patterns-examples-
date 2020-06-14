@@ -21,7 +21,13 @@
     </plugins>
     </build>
     <dependencies>
-        <!--        Test Dependencies-->
+        <!--  Test Dependencies-->
+        <dependency>
+            <groupId>nl.jqno.equalsverifier</groupId>
+            <artifactId>equalsverifier</artifactId>
+            <version>3.4</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
