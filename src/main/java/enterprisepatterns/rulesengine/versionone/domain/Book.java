@@ -12,4 +12,8 @@ public class Book {
   public String getReview() {
     return review;
   }
+
+  public String getTitle() {
+    return title;
+  }
 }

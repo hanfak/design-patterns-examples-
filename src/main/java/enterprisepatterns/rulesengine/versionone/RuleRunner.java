@@ -24,7 +24,7 @@ public class RuleRunner<T, S> {
 
   // This will take a type T and return a type S, can return void and thus either mutate type T when rule is applied
 
-  public S runRules(T entity) {
+  public S runRule(T entity) {
 //    for (Rule<T, S> rule : rules) {
 //        if (rule.matches(entity)) {
 //          return rule.process(entity);
@@ -36,6 +36,15 @@ public class RuleRunner<T, S> {
             .filter(rule -> rule.matches(entity))
             .map(rule -> rule.process(entity))
             .findFirst() //find all by removing this line
+            .orElseThrow(() -> new RuntimeException("No Matching rule found"));
+  }
+
+  // wip
+  public T applyCommonRuleWhenAnyMatches(T entity) {
+    return rules.stream()
+            .filter(rule -> rule.matches(entity))
+            .findFirst()
+            .map(rule -> entity)
             .orElseThrow(() -> new RuntimeException("No Matching rule found"));
   }
 

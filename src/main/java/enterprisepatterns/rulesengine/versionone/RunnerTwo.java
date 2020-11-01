@@ -25,7 +25,7 @@ public class RunnerTwo {
     List<Book> books = Arrays.asList(harryPotterBook, harryPotter2Book, harryPotter3Book, harryPotter4Book);
     books.stream()
             .map(book -> new RuleRunner<>(SummaryRulesAggregator.VERSION_1.getRules())
-                    .runRules(book))
+                    .runRule(book))
             .map(bookSummary -> String.format("Summary = %s\n\n", bookSummary))
             .forEach(System.out::println);
 
@@ -33,7 +33,7 @@ public class RunnerTwo {
     List<Book> classifiedBook = Collections.singletonList(secretBook);
     classifiedBook.stream()
             .map(book -> new RuleRunner<>(SummaryRulesAggregator.VERSION_2.getRules())
-                    .runRules(book))
+                    .runRule(book))
             .map(bookSummary -> String.format("ClassifiedSummary = %s\n\n", bookSummary))
             .forEach(System.out::println);
   }
