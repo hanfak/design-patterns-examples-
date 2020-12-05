@@ -34,16 +34,3 @@ public class PricerTest implements WithAssertions {
     }
 }
 
-class MovieRecordServerStub implements RecordServer {
-
-    private double price;
-
-    @Override
-    public void addMovieOrder(String customerId, String filmName, double price) {
-        this.price  = price;
-    }
-
-    double getPrice() {
-        return price;
-    }
-}
