@@ -1,4 +1,4 @@
-package designpatterns.gangoffour.iterator;
+package designpatterns.gangoffour.iterator.example1;
 
 import java.util.Arrays;
 import java.util.Iterator;
