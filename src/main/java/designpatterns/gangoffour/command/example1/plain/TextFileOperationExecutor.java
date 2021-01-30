@@ -1,4 +1,4 @@
-package designpatterns.gangoffour.command.plain;
+package designpatterns.gangoffour.command.example1.plain;
 
 import java.util.ArrayList;
 import java.util.List;

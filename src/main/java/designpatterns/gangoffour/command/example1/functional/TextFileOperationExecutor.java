@@ -1,4 +1,4 @@
-package designpatterns.gangoffour.command.functional;
+package designpatterns.gangoffour.command.example1.functional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,5 +19,9 @@ public class TextFileOperationExecutor {
   public String executeOperation(TextFileOperation textFileOperation) {
     textFileOperations.add(textFileOperation); // Not necessary but useful for other operations that might want to add
     return textFileOperation.execute();
+  }
+
+  public void executeAll() {
+    textFileOperations.forEach(TextFileOperation::execute);
   }
 }

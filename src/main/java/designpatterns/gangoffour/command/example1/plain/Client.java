@@ -1,6 +1,6 @@
-package designpatterns.gangoffour.command.plain;
+package designpatterns.gangoffour.command.example1.plain;
 
-import designpatterns.gangoffour.command.TextFile;
+import designpatterns.gangoffour.command.example1.TextFile;
 
 /**
  *

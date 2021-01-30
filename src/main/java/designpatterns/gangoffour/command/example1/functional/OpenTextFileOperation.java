@@ -1,17 +1,17 @@
-package designpatterns.gangoffour.command.functional;
+package designpatterns.gangoffour.command.example1.functional;
 
-import designpatterns.gangoffour.command.TextFile;
+import designpatterns.gangoffour.command.example1.TextFile;
 
-public class SaveTextFileOperation implements TextFileOperation {
+public class OpenTextFileOperation implements TextFileOperation {
   private final TextFile textFile;
 
-  public SaveTextFileOperation(TextFile textFile) {
+  public OpenTextFileOperation(TextFile textFile) {
     this.textFile = textFile;
   }
 
   @Override
   public String execute() {
-    return textFile.save();
+    return textFile.open();
   }
 }
 

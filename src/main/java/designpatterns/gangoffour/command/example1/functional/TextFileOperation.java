@@ -1,5 +1,6 @@
-package designpatterns.gangoffour.command.plain;
+package designpatterns.gangoffour.command.example1.functional;
 
+@FunctionalInterface
 public interface TextFileOperation {
   String execute();
 }

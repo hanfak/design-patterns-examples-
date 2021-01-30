@@ -1,6 +1,6 @@
-package designpatterns.gangoffour.command.functional;
+package designpatterns.gangoffour.command.example1.functional;
 
-import designpatterns.gangoffour.command.TextFile;
+import designpatterns.gangoffour.command.example1.TextFile;
 
 /**
  *
@@ -21,5 +21,10 @@ public class Client {
     TextFile textFile = new TextFile("file1.txt");
     textFileOperationExecutor1.executeOperation(textFile::open);
     textFileOperationExecutor1.executeOperation(textFile::save);
+
+    // or
+
+    textFileOperationExecutor1.executeAll();
+
   }
 }

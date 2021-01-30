@@ -1,4 +1,4 @@
-package designpatterns.gangoffour.command;
+package designpatterns.gangoffour.command.example1;
 
 public class TextFile {
 
