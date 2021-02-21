@@ -40,6 +40,9 @@ public class TripService {
     return TripDAO.findTripsByUser(user);
   }
 
+  // If the constructor cannot be changed, can use overloading, and by these methods to into it
+  // If method signature cannot be changed, can stick with the protected method seams
+  //    or overload the public method, but this may not be possible if method is defined in interface class
   protected User getLoggedUser() {
     return UserSession.getInstance().getLoggedUser();
   }
