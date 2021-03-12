@@ -28,7 +28,7 @@ public class Example01 {
         System.out.println(example01.getPackage());
 
         // If do not know then use
-        Class example01RetrieveName = Class.forName("com.hanfak.reflection.Example01");
+        Class example01RetrieveName = Class.forName("filesapi.reflection.Example01");
         System.out.println(Arrays.toString(example01RetrieveName.getDeclaredFields()));
     }
 
