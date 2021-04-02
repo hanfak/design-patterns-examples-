@@ -14,6 +14,7 @@ import static org.mockito.Mockito.mock;
 
 public class ExampleTest {
 
+  // cannot use final due to  annotations
   @InjectMocks
   private PersonService personService;
   @Mock

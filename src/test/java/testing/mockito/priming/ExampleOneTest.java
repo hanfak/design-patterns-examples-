@@ -18,8 +18,8 @@ import static org.mockito.Mockito.mock;
 
 public class ExampleOneTest {
 
-  private PersonRepository personRepository = mock(PersonRepository.class);
-  private PersonService personService = new PersonService(personRepository);
+  private final PersonRepository personRepository = mock(PersonRepository.class);
+  private final PersonService personService = new PersonService(personRepository);
 
   @Test
   public void shouldReturnFirstPerson() {
