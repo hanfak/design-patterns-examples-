@@ -2,10 +2,14 @@ package testing.mockito.priming;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 import org.mockito.AdditionalAnswers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 import testing.mockito.argumentcaptor.Person;
 import testing.mockito.argumentcaptor.PersonRepository;
 import testing.mockito.argumentcaptor.PersonService;
@@ -14,11 +18,8 @@ import static org.mockito.Mockito.mock;
 
 public class ExampleTest {
 
-  // cannot use final due to  annotations
-  @InjectMocks
-  private PersonService personService;
-  @Mock
-  private PersonRepository personRepository;
+  private final PersonRepository personRepository = mock(PersonRepository.class);
+  private final PersonService personService = new PersonService(personRepository);
 
   @Test
   public void shouldReturnFirstArg() {
@@ -52,7 +53,8 @@ public class ExampleTest {
     Person firstPerson = new Person("first");
     Person secondPerson = new Person("second");
     Person thirdPerson = new Person("third");
-    Mockito.when(personRepository.select(firstPerson, secondPerson, thirdPerson)).then(AdditionalAnswers.returnsLastArg());
+    Mockito.when(personRepository.select(firstPerson, secondPerson, thirdPerson))
+        .then(AdditionalAnswers.returnsLastArg());
 
     Person actual = personService.select(firstPerson, secondPerson, thirdPerson);
 
@@ -74,8 +76,6 @@ public class ExampleTest {
 
   @Test
   public void shouldReturnDefaultPerson() {
-    PersonRepository personRepository = mock(PersonRepository.class);
-    PersonService personService = new PersonService(personRepository);
     Person defaultPerson = new Person("default");
     Mockito.when(personRepository.update(Mockito.any(Person.class))).thenReturn(defaultPerson);
 
@@ -85,8 +85,6 @@ public class ExampleTest {
 
   @Test
   public void shouldDefineMultipleExpectations() {
-    PersonRepository personRepository = mock(PersonRepository.class);
-    PersonService personService = new PersonService(personRepository);
     Person firstExpected = new Person("first");
     Person secondExpected = new Person("second");
     Mockito.when(personRepository.update(Mockito.any(Person.class))).thenReturn(firstExpected).thenReturn(secondExpected);
@@ -102,8 +100,6 @@ public class ExampleTest {
 
   @Test // fails
   public void shouldNotDefineMultipleExpectations() {
-    PersonRepository personRepository = mock(PersonRepository.class);
-    PersonService personService = new PersonService(personRepository);
     Person firstExpected = new Person("first");
     Person secondExpected = new Person("second");
     Mockito.when(personRepository.update(Mockito.any(Person.class))).thenReturn(firstExpected);
