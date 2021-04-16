@@ -36,57 +36,11 @@ public class Java8StyleAssertions {
 
   @Test
   public void whenException() {
-    Supplier<IllegalStateException> x = IllegalStateException::new;
-    throwExceotion(x);
-    Predicate<String> a = Objects::isNull;
-    Predicate<String> a1 = a.or(y -> y.contains("a"));
-    Pair<Predicate<String>, Supplier<IllegalStateException>> p = Pair.of(a1, x);
-    Pair<Predicate<String>, String> p1 = Pair.of(a1, "reason");
-
-    // rules -> filter (all and/or/complex) then map action else do nothing
-    // rules -> filter (all and/or/complex) then map action else throw
-    // rules -> filter (single)  then map action else do nothing
-    // rules -> filter (single) then map action else throw
-
-    // combined validation using function composition
-
-    //https://www.baeldung.com/java-predicate-chain
-
-    // on type
-    // On list
-    // On Optional
-    // On primitive
-
-    System.out.println(validate(p, "Hello"));
-    System.out.println(validate1(p1, "Hallo"));
-    System.out.println(validate(p, "Hallo"));
-
-
     assertThatThrownBy(() -> {
       throw new IOException();
     })
         .isInstanceOf(IOException.class)
         .hasStackTraceContaining("IOException");
-  }
-
-  private String validate(Pair<Predicate<String>, Supplier<IllegalStateException>> p, String arg) {
-    return Optional.of(arg)
-        .filter(not(p.getLeft()))
-        .orElseThrow(p.getRight());
-  }
-
-  private String validate1(Pair<Predicate<String>, String> p, String arg) {
-    return Optional.of(arg)
-        .filter(not(p.getLeft()))
-        .orElse(p.getRight());
-  }
-
-  private void throwExceotion(Supplier<IllegalStateException> x) {
-    try {
-      throw x.get();
-    } catch (Exception e) {
-      System.out.println(e);
-    }
   }
 
   @Test
