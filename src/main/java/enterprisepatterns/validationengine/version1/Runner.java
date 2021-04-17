@@ -1,11 +1,15 @@
 package enterprisepatterns.validationengine.version1;
 
+import java.util.List;
+import java.util.OptionalLong;
+
 public class Runner {
   public static void main(String... args) {
     // Returns standard exception when at least one validation check fails
     StringArgumentValidator stringArgumentValidator = new StringArgumentValidator();
     String validatedInput1 = stringArgumentValidator.validate("Hello, my email is bob.duke@google.com");
     System.out.println("validatedInput1 = " + validatedInput1);
+
 
     // The following inputs will fail
 //    // Throw exception
