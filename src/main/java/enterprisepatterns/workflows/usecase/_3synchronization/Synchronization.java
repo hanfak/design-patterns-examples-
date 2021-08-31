@@ -21,7 +21,7 @@ public class Synchronization {
   public void execute(String input) {
     // Example 1 - using callables
     // Step 1 - Start all processors
-    List<String > process = parallelProcessor.process(Arrays.asList(
+    List<String> process = parallelProcessor.process(Arrays.asList(
             () -> service.sendSomething(input),
             () -> service.sendSomethingElse(input)));
 

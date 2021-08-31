@@ -2,6 +2,7 @@ package enterprisepatterns.validationengine.version3;
 
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,6 +30,7 @@ public class StringArgumentValidator1 implements Validator<String> {
     // Cannot do and rule, as multiple rules must fail but can only throw one exception
     List<Pair<Predicate<String>, ? extends Supplier<? extends RuntimeException>>> rules =
         List.of(validationRule1, validationRule2, validationRule3);
+    System.out.println("rules = " + rules);
     return inputs.stream()
         .peek(input -> rules.stream()
             .filter(x -> x.getLeft().test(input))

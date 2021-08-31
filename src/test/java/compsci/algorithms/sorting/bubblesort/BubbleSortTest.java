@@ -1,4 +1,4 @@
-package compsci.sorting.bubblesort;
+package compsci.algorithms.sorting.bubblesort;
 
 import org.junit.Test;
 

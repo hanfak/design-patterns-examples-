@@ -26,5 +26,9 @@ public class AndSplitUsecase {
     parallelProcessor.process(
             () -> service.send(result),
             () -> repository.storeSomething(input));
+
+    //This can be done by sending each action to a queue,
+    // and have two consumers consume the messages to implement the action
+    // by setting the configuration of the queue to have 2 consumers
   }
 }
