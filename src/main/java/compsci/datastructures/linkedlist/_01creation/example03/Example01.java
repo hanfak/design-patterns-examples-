@@ -1,4 +1,4 @@
-package compsci.datastructures.linkedlist.creation.example03;
+package compsci.datastructures.linkedlist._01creation.example03;
 
 public class Example01 {
   public static void main(String[] args) {

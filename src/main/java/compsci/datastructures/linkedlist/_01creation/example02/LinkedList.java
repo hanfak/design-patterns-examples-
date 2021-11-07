@@ -1,4 +1,4 @@
-package compsci.datastructures.linkedlist.creation.example02;
+package compsci.datastructures.linkedlist._01creation.example02;
 
 public class LinkedList {
 

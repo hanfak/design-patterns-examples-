@@ -1,4 +1,4 @@
-package compsci.datastructures.linkedlist.creation.example03;
+package compsci.datastructures.linkedlist._01creation.example03;
 
 public class Node {
   // reference to the next node in the chain, or null if there isn't one.
