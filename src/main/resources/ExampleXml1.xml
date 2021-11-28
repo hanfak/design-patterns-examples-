@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Person>
-    <age>31</age>
-    <city>New York</city>
-    <male>true</male>
-    <name>John</name>
-    <pets null="true" />
-</Person>
