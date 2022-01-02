@@ -26,6 +26,7 @@
         <module>refactoring</module>
         <module>all</module>
         <module>designpatterns</module>
+        <module>compsci</module>
     </modules>
     <dependencyManagement>
 
