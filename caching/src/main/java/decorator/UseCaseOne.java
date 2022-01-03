@@ -1,4 +1,4 @@
-package caching.decorator;
+package decorator;
 
 import lombok.SneakyThrows;
 
@@ -10,7 +10,7 @@ public class UseCaseOne implements UseCase<InstructionOne> {
       throw new IllegalStateException("Its bad TOO");
     }
     if (input.getValue().equals("worse")) {
-      throw new UseCaseExecption("its worse TOO");
+      throw new UseCaseException("its worse TOO");
     }
     if (input.getValue().equals("end of the world")){
       throw new RuntimeException("end of the world TOO");

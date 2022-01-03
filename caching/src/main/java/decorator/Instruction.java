@@ -1,4 +1,4 @@
-package caching.decorator;
+package decorator;
 
 public interface Instruction {
   String instructionValue();

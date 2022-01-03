@@ -1,4 +1,4 @@
-package caching.decorator;
+package decorator;
 
 import lombok.Value;
 
