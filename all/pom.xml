@@ -114,12 +114,6 @@
             <version>3.9.0</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.tngtech.archunit</groupId>
-            <artifactId>archunit-junit4</artifactId>
-            <version>0.13.1</version>
-            <scope>test</scope>
-        </dependency>
         <!--   Prod Dependencies     -->
         <dependency>
             <groupId>org.slf4j</groupId>

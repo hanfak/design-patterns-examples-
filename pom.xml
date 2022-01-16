@@ -29,6 +29,7 @@
         <module>compsci</module>
         <module>caching</module>
         <module>javalibraries</module>
+        <module>architecturepatterns</module>
     </modules>
     <dependencyManagement>
 
