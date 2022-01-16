@@ -5,7 +5,6 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Clock;
@@ -16,10 +15,10 @@ public class Repository {
   private final NamedParameterJdbcTemplate jdbcTemplate;
   private final SimpleJdbcCall simpleJdbcTemplate;
 
-  public Repository(Clock clock, DataSource dataSource) {
+  public Repository(Clock clock, SimpleJdbcCall simpleJdbcTemplate, NamedParameterJdbcTemplate jdbcTemplate) {
     this.clock = clock;
-    this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
-    this.simpleJdbcTemplate = new SimpleJdbcCall(dataSource);
+    this.jdbcTemplate = jdbcTemplate;
+    this.simpleJdbcTemplate = simpleJdbcTemplate;
   }
 
   public PersonName getPersonName(Long personId) {
