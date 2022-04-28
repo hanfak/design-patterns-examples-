@@ -30,6 +30,8 @@
         <module>caching</module>
         <module>javalibraries</module>
         <module>architecturepatterns</module>
+        <module>database</module>
+        <module>commonlibraries</module>
     </modules>
     <dependencyManagement>
 
