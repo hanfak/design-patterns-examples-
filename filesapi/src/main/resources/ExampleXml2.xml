@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employee>
+    <address>
+        <city>San Jose</city>
+        <street>Albany Dr</street>
+        <zipcode>95129</zipcode>
+    </address>
+    <cities>
+        <city>Los Angeles</city>
+        <city>New York</city>
+    </cities>
+    <id>123</id>
+    <name>Pankaj</name>
+    <permanent>true</permanent>
+    <phoneNumbers>
+        <phoneNumber>123456</phoneNumber>
+        <phoneNumber>987654</phoneNumber>
+    </phoneNumbers>
+    <properties>
+        <age>29 years</age>
+        <salary>1000 USD</salary>
+    </properties>
+    <role null="true" />
+</Employee>

@@ -32,6 +32,7 @@
         <module>architecturepatterns</module>
         <module>database</module>
         <module>commonlibraries</module>
+        <module>filesapi</module>
     </modules>
     <dependencyManagement>
 
