@@ -33,6 +33,7 @@
         <module>database</module>
         <module>commonlibraries</module>
         <module>filesapi</module>
+        <module>concurrency</module>
     </modules>
     <dependencyManagement>
 
