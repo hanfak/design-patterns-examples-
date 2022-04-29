@@ -6,6 +6,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
+
 // For single or comles rule, Here we pass in arguments to exception message, generally the input. For one input value
 public class StringArgumentValidator1 implements Validator<String> {
   private final Function<String, IllegalStateException> exception = x -> new IllegalStateException("Should contain Hello, actual: " + x);

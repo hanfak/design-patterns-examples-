@@ -1,8 +1,5 @@
 package enterprisepatterns.validationengine.version1;
 
-import java.util.List;
-import java.util.OptionalLong;
-
 public class Runner {
   public static void main(String... args) {
     // Returns standard exception when at least one validation check fails

@@ -1,4 +1,4 @@
-package exampleone;
+package enterprisepatterns.specification.exampleone;
 
 import java.util.Scanner;
 

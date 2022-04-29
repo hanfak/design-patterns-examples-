@@ -35,6 +35,7 @@
         <module>filesapi</module>
         <module>concurrency</module>
         <module>functional</module>
+        <module>enterprisepatterns</module>
     </modules>
     <dependencyManagement>
 
