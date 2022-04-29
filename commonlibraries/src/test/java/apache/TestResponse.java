@@ -1,7 +1,5 @@
 package apache;
 
-import commonlibraries.httpclient.apache.Response;
-
 public class TestResponse extends Response {
 
     private long responseTime;

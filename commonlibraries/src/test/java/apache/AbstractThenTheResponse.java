@@ -2,13 +2,12 @@ package apache;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
-import commonlibraries.httpclient.apache.Response;
 import org.assertj.core.api.AbstractObjectAssert;
 import org.assertj.core.api.Assertions;
 
 import java.util.regex.Pattern;
 
-import static commonlibraries.httpclient.apache.Header.CONTENT_TYPE_KEY;
+import static apache.Header.CONTENT_TYPE_KEY;
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 

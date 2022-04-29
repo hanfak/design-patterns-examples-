@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import static commonlibraries.httpclient.apache.Header.CONTENT_LENGTH_KEY;
+import static apache.Header.CONTENT_LENGTH_KEY;
 
 
 @SuppressWarnings("PMD.TooManyMethods") // This is a builder and so it is OK to have lots of convenience methods

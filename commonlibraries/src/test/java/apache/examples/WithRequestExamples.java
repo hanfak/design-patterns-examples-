@@ -1,8 +1,8 @@
 package apache.examples;
 
 
-import commonlibraries.httpclient.apache.Request;
-import commonlibraries.httpclient.apache.RequestBuilder;
+import apache.Request;
+import apache.RequestBuilder;
 
 public interface WithRequestExamples {
 

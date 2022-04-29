@@ -17,8 +17,9 @@ import java.net.URISyntaxException;
 import java.time.Duration;
 import java.util.List;
 
-import static commonlibraries.httpclient.apache.Header.CONTENT_LENGTH_KEY;
-import static commonlibraries.httpclient.apache.Header.CONTENT_TYPE_KEY;
+import static apache.Header.CONTENT_LENGTH_KEY;
+import static apache.Header.CONTENT_TYPE_KEY;
+import static java.util.Arrays.stream;
 import static java.lang.String.format;
 import static java.util.stream.Collectors.toList;
 import static org.apache.http.client.config.RequestConfig.DEFAULT;

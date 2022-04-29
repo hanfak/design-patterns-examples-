@@ -1,7 +1,7 @@
 package apache;
 
 
-import commonlibraries.httpclient.apache.examples.WithExamples;
+import apache.examples.WithExamples;
 import org.junit.Test;
 
 public class ResponseTest implements WithAssertions, WithExamples {

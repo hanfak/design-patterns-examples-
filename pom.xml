@@ -36,6 +36,7 @@
         <module>concurrency</module>
         <module>functional</module>
         <module>enterprisepatterns</module>
+        <module>integrations</module>
     </modules>
     <dependencyManagement>
 
@@ -54,6 +55,13 @@
                 <version>6.8.2</version>
                 <scope>test</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+            </dependency>
+
             <dependency>
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-java</artifactId>

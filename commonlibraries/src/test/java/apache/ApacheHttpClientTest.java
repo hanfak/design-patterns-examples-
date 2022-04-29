@@ -1,6 +1,6 @@
 package apache;
 
-import commonlibraries.httpclient.apache.examples.WithExamples;
+import apache.examples.WithExamples;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static commonlibraries.httpclient.apache.HttpClient.DEFAULT_TIMEOUT;
+import static apache.HttpClient.DEFAULT_TIMEOUT;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;

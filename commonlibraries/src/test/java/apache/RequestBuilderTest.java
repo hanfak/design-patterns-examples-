@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static commonlibraries.httpclient.apache.Streams.concat;
+import static apache.Streams.concat;
 import static java.lang.System.lineSeparator;
 import static java.net.HttpCookie.parse;
 import static java.util.stream.Collectors.toList;

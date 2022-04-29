@@ -1,8 +1,8 @@
 package apache.examples;
 
 
-import commonlibraries.httpclient.apache.Response;
-import commonlibraries.httpclient.apache.ResponseBuilder;
+import apache.Response;
+import apache.ResponseBuilder;
 
 public interface WithResponseExamples {
 
