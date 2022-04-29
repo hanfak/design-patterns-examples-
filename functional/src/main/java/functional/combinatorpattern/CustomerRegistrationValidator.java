@@ -4,10 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.function.Function;
 
-import static functional.combinatorpattern.CustomerRegistrationValidator.ValidationResult.EMAIL_NOT_VALID;
-import static functional.combinatorpattern.CustomerRegistrationValidator.ValidationResult.IS_NOT_AN_ADULT;
-import static functional.combinatorpattern.CustomerRegistrationValidator.ValidationResult.PHONE_NUMBER_NOT_VALID;
-import static functional.combinatorpattern.CustomerRegistrationValidator.ValidationResult.SUCCESS;
+import static functional.combinatorpattern.CustomerRegistrationValidator.ValidationResult.*;
 
 public interface CustomerRegistrationValidator extends Function<Customer, CustomerRegistrationValidator.ValidationResult> {
 

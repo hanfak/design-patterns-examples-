@@ -1,12 +1,10 @@
 package functional.combinatorpattern;
 
-import functional.combinatorpattern.CustomerRegistrationValidator.ValidationResult;
+import functional.combinatorpattern.CustomerRegistrationValidator.*;
 
 import java.time.LocalDate;
 
-import static functional.combinatorpattern.CustomerRegistrationValidator.isAnAdult;
-import static functional.combinatorpattern.CustomerRegistrationValidator.isEmailValid;
-import static functional.combinatorpattern.CustomerRegistrationValidator.isPhoneNumberValid;
+import static functional.combinatorpattern.CustomerRegistrationValidator.*;
 
 public class Runner2 {
 

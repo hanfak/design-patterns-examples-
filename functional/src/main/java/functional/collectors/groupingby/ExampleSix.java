@@ -8,9 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static java.util.Comparator.comparingInt;
-import static java.util.stream.Collectors.collectingAndThen;
-import static java.util.stream.Collectors.maxBy;
-import static java.util.stream.Collectors.minBy;
+import static java.util.stream.Collectors.*;
 
 public class ExampleSix {
 

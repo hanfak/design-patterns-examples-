@@ -9,10 +9,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.averagingLong;
-import static java.util.stream.Collectors.counting;
-import static java.util.stream.Collectors.mapping;
-import static java.util.stream.Collectors.toUnmodifiableSet;
+import static java.util.stream.Collectors.*;
 
 public class ExampleFive {
 

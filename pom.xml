@@ -34,6 +34,7 @@
         <module>commonlibraries</module>
         <module>filesapi</module>
         <module>concurrency</module>
+        <module>functional</module>
     </modules>
     <dependencyManagement>
 

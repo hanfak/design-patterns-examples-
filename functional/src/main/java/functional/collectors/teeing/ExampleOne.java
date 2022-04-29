@@ -8,9 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Comparator.comparingInt;
-import static java.util.stream.Collectors.maxBy;
-import static java.util.stream.Collectors.minBy;
-import static java.util.stream.Collectors.teeing;
+import static java.util.stream.Collectors.*;
 
 public class ExampleOne {
   // https://dzone.com/articles/java-12-the-teeing-collector
