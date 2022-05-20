@@ -1,4 +1,4 @@
-package database.jdbcTemplate.example01;
+package jdbcTemplate.example01;
 
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
@@ -7,7 +7,7 @@ import javax.sql.DataSource;
 import java.time.Clock;
 import java.util.List;
 
-import static database.jdbcTemplate.example01.DataSourceFactory.dataSourceFor;
+import static jdbcTemplate.example01.DataSourceFactory.dataSourceFor;
 
 public class Runner {
 

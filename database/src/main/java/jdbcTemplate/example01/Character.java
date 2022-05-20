@@ -1,4 +1,4 @@
-package database.jdbcTemplate.example01;
+package jdbcTemplate.example01;
 
 import lombok.Value;
 
