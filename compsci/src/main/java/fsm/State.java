@@ -1,4 +1,4 @@
-package enterprisepatterns.specification.exampleone;
+package fsm;
 
 import java.util.Arrays;
 import java.util.HashMap;
