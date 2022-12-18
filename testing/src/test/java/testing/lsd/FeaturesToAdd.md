@@ -1,0 +1,7 @@
+- Add custom js and css files
+  - Added last, so can override 
+- Make html sections collapsable 
+- contents have search bar
+- custom html layouts
+- custom description renderer
+- toggle to display method in description
