@@ -37,6 +37,7 @@
         <module>functional</module>
         <module>enterprisepatterns</module>
         <module>integrations</module>
+        <module>dsl</module>
     </modules>
     <dependencyManagement>
 
