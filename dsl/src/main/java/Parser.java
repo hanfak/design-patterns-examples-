@@ -28,6 +28,7 @@ public class Parser {
     }
 
     private List<LocalDateTime> parseDates(String condition) {
+      //^\b(([Mm]on|[Tt]ues|[Ww]ed(nes)?|[Tt]hur(s)?|[Ff]ri|[Ss]at(ur)?|[Ss]un)(day)?)\b from \b*(1[0-2]|[1-9]) *(a|p|A|P)(m|M)\b to \b*(1[0-2]|[1-9]) *(a|p|A|P)(m|M)\b$
         Pattern regexPattern = Pattern.compile("^$");
         Matcher m = regexPattern.matcher(condition);
         if (m.find( )) {
