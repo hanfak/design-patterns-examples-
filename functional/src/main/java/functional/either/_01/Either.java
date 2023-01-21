@@ -1,4 +1,4 @@
-package functional.either;
+package functional.either._01;
 
 import java.util.Optional;
 import java.util.function.Consumer;
