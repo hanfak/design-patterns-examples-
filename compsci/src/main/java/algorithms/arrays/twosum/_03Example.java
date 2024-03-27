@@ -1,6 +1,6 @@
 package algorithms.arrays.twosum;
 
-public class _3Example {
+public class _03Example {
 
     // Finds all possible pairs
     public static int[] twoSum(int[] nums, int target) {
