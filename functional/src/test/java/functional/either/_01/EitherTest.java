@@ -2,6 +2,7 @@ package functional.either._01;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,6 +12,10 @@ class EitherTest {
     @Test
     public void testEitherLeft() {
         final Either<Integer, String> l = Either.left(5);
+
+        Optional<Integer> optionalInteger = Optional.of(5);
+        Either<String, Integer> something = optionalInteger.<Either<String, Integer>>map(i -> Either.left("Something"))
+                .orElse(Either.right(5));
 
         int v = l.fold(Integer::intValue, String::length);
         assertEquals(5, v);

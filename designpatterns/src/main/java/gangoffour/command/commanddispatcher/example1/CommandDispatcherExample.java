@@ -8,7 +8,7 @@ public class CommandDispatcherExample {
     public static void main(String[] args) {
         var document = documentFactory();
         var dispatcher = new CommandDispatcher();
-
+        String padded = leftPad("hello", 5);
         // Register commands
         dispatcher.registerCommand("save", new SaveCommand(document));
         dispatcher.registerCommand("print", new PrintCommand(document));
@@ -16,6 +16,11 @@ public class CommandDispatcherExample {
         // Dispatch commands
         dispatcher.dispatch("save"); // Saves the document
         dispatcher.dispatch("print"); // Prints the document
+    }
+
+    private static String leftPad(String value, int padding) {
+        String empty = " ";
+        return empty.repeat(padding).concat(value);
     }
 
     private static Document documentFactory() {
