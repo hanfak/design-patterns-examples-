@@ -13,10 +13,12 @@ public record Customer(
         return !behindWithPayments;
     }
 
-    boolean isVip(){
+    boolean isVip() {
         return VIP.equals(segment);
     }
-enum Segment{
-    VIP, REGULAR
-}
+
+    enum Segment {
+        VIP,
+        REGULAR
+    }
 }

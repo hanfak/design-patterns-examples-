@@ -1,7 +1,7 @@
 package namedarguments;
 
-import lombok.Builder;
 import lombok.Value;
+import namedarguments.PunchArgs.PunchArgsBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,11 +25,11 @@ public class Example01 {
     System.out.println("punchAmount2 = " + punchAmount2);
 
     // Use builder as argument, similar to just constructing the object via new or static factory
-    int punchAmount3 = robot.punch2(PunchArgs.punchArgs().force(1).speed(100));
+    int punchAmount3 = robot.punch2(PunchArgs.builder().force(1).speed(100));
     System.out.println("punchAmount3 = " + punchAmount3);
 
     // build with defaulted value for force
-    int punchAmount3a = robot.punch2(PunchArgs.punchArgs().speed(100));
+    int punchAmount3a = robot.punch2(PunchArgs.builder().speed(100));
     System.out.println("punchAmount3a = " + punchAmount3a);
 
     // Use map as arg
@@ -78,9 +78,9 @@ class Robot {
     return speed.getValue() * force.getValue();
   }
 
-  public int punch2(PunchArgs.PunchArgsBuilder builder) {
+  public int punch2(PunchArgsBuilder builder) {
     PunchArgs punchArgs = builder.build(); // Can move this step to method call
-    return punchArgs.getSpeed() * punchArgs.getForce();
+    return punchArgs.speed() * punchArgs.force();
   }
 
   public int punch3(Map<String, Integer> punchargs) {
@@ -88,7 +88,7 @@ class Robot {
   }
 
   public int punch4(PunchArgs punchargs) {
-    return punchargs.getSpeed() * punchargs.getForce();
+    return punchargs.speed() * punchargs.force();
   }
 
   public Robot punchWithSpeed(int speed) {
@@ -101,11 +101,39 @@ class Robot {
   }
 }
 
-@Builder(builderMethodName = "punchArgs")
-@Value
-class PunchArgs {
-  int speed;
-  @Builder.Default  Integer force = 1;
+record PunchArgs(int speed, Integer force) {
+
+
+  public static PunchArgsBuilder builder() {
+    return new PunchArgsBuilder();
+  }
+
+  public static class PunchArgsBuilder {
+
+    private int speed;
+    private Integer force;
+
+    PunchArgsBuilder() {
+    }
+
+    public PunchArgsBuilder speed(int speed) {
+      this.speed = speed;
+      return this;
+    }
+
+    public PunchArgsBuilder force(Integer force) {
+      this.force = force;
+      return this;
+    }
+
+    public PunchArgs build() {
+      return new PunchArgs(this.speed, this.force);
+    }
+
+    public String toString() {
+      return "PunchArgs.PunchArgsBuilder(speed=" + this.speed + ", force=" + this.force + ")";
+    }
+  }
 }
 
 @Value

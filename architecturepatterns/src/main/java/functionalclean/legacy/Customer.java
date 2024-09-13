@@ -16,7 +16,7 @@ public record Customer(
     boolean isVip(){
         return VIP.equals(segment);
     }
-enum Segment{
+public enum Segment{
     VIP, REGULAR
 }
 }

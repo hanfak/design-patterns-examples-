@@ -1,8 +1,6 @@
 package integrations.messaging.example02;
 
-import lombok.Value;
+public record Topic(
+        String name) {
 
-@Value
-public class Topic {
-  String name;
 }
